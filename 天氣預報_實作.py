@@ -75,8 +75,8 @@ def AQIAlarm(lat, lon):
 	Min = 1000000000
 	for i in range(1,len(StationList)):
 		# print(StationList[i])
-		if StationList[i][-1] != "" and StationList[i][-2] != "":
-			k = geodistance(float(StationList[i][-2]), float(StationList[i][-1]), lon, lat)
+		if StationList[i][-2] != "" and StationList[i][-3] != "":
+			k = geodistance(float(StationList[i][-3]), float(StationList[i][-2]), lon, lat)
 			if k < Min:
 				# print(k)
 				Min = k
